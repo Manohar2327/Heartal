@@ -1,0 +1,62 @@
+
+/*.body
+{
+	
+	width:100%;
+	background-color:#000;
+}*/
+h1
+{
+	text-align:center;
+	margin-top:30px;
+	font-size:50px;
+}
+.gallery
+{
+	height:70%;
+	width:100%;
+	display:flex;
+	margin:5% auto 0;
+	box-sizing:border-box;
+	/*background:linear-gradient(to right,#33ccff 0%,#99ffcc 100%);*/
+}
+
+.img-box
+{
+	margin :0 1%;	
+	flex-grow:1;
+	flex-basis:0;
+	transition:0.5s;
+}
+
+
+.img-box img
+{
+	height:100%;
+	width:100%;
+	object-fit:cover;/*for perfection*/
+	transition:0.5s;
+	
+}
+
+.img-box:hover
+{
+	flex-basis:50%;
+	
+}
+.active
+{
+	flex-basis:50%;
+	
+}
+.gallery:hover .active
+{
+	flex-basis:0;
+	
+	
+}
+.img-box:nth-child(1):hover
+{
+	
+	flex-basis:50%;
+}

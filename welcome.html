@@ -1,0 +1,139 @@
+<html>
+<head>
+<title>
+WELCOME
+</title>
+<link rel="stylesheet" type="text/css" href="wlcm.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body onload="slider()">
+<div class="banner">
+		<div class="slider">
+		<img src="images/1p.jpg" id="slideimg">
+		</div>
+		
+		<div class="overlay">
+		
+		<div class="content">
+			<h1>HEartAL</h1>
+			<h3>  “Everyone has talent. What's rare is the courage to follow it to the dark places where it leads.”
+
+					</h3>
+			
+
+			<div class="section">
+		<button class="modal-btn">Login</button>
+			</div>
+
+					
+		</div>
+
+		</div>	
+		
+	</div>
+
+
+<div class="modal-bg"> 
+  <div class="modal">
+<div class="form-box">
+<div class="button-box">
+<div id="bton"></div>
+<button type="button" class="toggle-bton"onclick="login()">Login</button>
+<button type="button" class="toggle-bton"onclick="register()">Register</button>
+</div>
+<!---<div class="social">
+<img src="face.png">
+<img src="gmal.png">
+
+</div>--->
+ 
+ 
+<form id="login" class="input-group">
+    <input type="text" class="input-field" placeholder="User Id"required>
+	<input type="password" class="input-field" id="data" placeholder="Password"required>
+	<input type="checkbox" id="change1" onclick="visible()"></input>
+  	<input type="checkbox" class="checkbox"><span>Remember Password</span>
+	<button type="submit"class="submit-bton">Login</button>
+	<span class="modal-close">X</span>
+</form>
+<form id="register"class="input-group">
+    <input type="text" class="input-field" placeholder="User Id"required>
+	<input type="email" class="input-field" placeholder="Email Id"required>
+	<input type="password" class="input-field" id="data" placeholder="Password"required>
+	<input type="checkbox" id="change2" onclick="visible()"></input>	
+	<input type="checkbox" class="checkbox"><span>i agree to the Terms and Conditions</span>
+	<button type="submit"class="submit-bton">Register</button>
+	<span class="modal-close">X</span>
+</form>
+	
+</div>
+</div>
+</div>
+<script>
+	var slideimg = document.getElementById("slideimg");
+	var images=new Array(
+				"images/1p.jpg",
+				"images/1c.jpg",
+				"images/2d.jpg",
+				"images/1a.jpg"
+			);
+			var len=images.length;
+			var i=0;
+			 function slider()
+			 {
+				if(i> len-1){
+					i=0;
+				}
+			 slideimg.src=images[i];
+			 i++;
+			 setTimeout('slider()',3000);
+			 
+			 }
+			 
+			 
+	
+	</script>
+	
+	<script>
+	function visible()
+	{
+	var m=document.getElementById("data");
+		if(m.type=="password")
+		{
+			m.type="text";
+		}
+		else
+		{
+			m.type="password";
+		}
+	}
+	
+	</script>
+	
+	
+
+<script src="modal.js"></script>
+<script>
+var x=document.getElementById("login");
+var y=document.getElementById("register");
+var z=document.getElementById("bton");
+
+function register()
+{
+x.style.left="-400px";
+y.style.left="50px";
+z.style.left="110px";
+}
+
+function login()
+{
+x.style.left="50px";
+y.style.left="450px";
+z.style.left="0";
+}
+
+</script>
+
+</body>
+
+</html>
